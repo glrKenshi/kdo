@@ -1,0 +1,57 @@
+@import '../../styles/variables';
+
+.footer {   
+    min-height: 295px;
+    padding: 60px 40px;
+    background-color: $secondary;
+    color: $white;
+
+    &__container {  
+        display: flex;
+        gap: 250px;
+    }
+
+    &__text {
+        max-width: 50%;
+        font-size: 14px;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        span {  
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .footer {   
+
+        &__container {  
+            gap: 0;
+            justify-content: space-between;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .footer {   
+        padding: 50px 20px;
+
+        &__container {  
+            flex-direction: column;
+        }
+
+        &__text {   
+            min-width: 100%;
+            order: 2;
+        }
+
+        &__info {   
+            margin-bottom: 16px;
+        }
+    }
+}

@@ -1,0 +1,392 @@
+@import '../../styles/variables';
+
+.doctors {  
+    margin-bottom: 160px;
+
+    &__heading {    
+        margin-bottom: 70px;
+        font-size: 48px;
+    }
+
+    &__content {    
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    &__tabs {   
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__tab {    
+        width: 350px;
+        padding: 25px 20px;
+        border: 2px solid $primary;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: all ease 0.3s;
+
+        &:hover {   
+            background-color: $primary;
+            color: $white;
+        }
+    }
+
+    &__active-tab { 
+        background-color: $primary;
+        color: $white;
+    }
+
+    &__tab-name {   
+        font-size: 20px;
+        margin-bottom: 4px;
+    }
+
+    &__tab-role {   
+        font-size: 14px;
+    }
+
+    &__card {    
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        position: relative;
+        height: 670px;
+        min-width: 464px;
+        background-image: url('../../assets/main/docBg.png');
+        background-size: cover;
+        background-position: center;
+        border-radius: 40px;
+        animation: slideInFromTop 0.5s ease-out forwards;
+    }
+
+    &__img {    
+        height: 590px;
+    }
+
+    &__box {   
+        display: flex;
+        flex-direction: column;
+        animation: slideInFromTop 0.5s ease-out forwards;
+    }
+
+    &__info {   
+        width: 100%;
+        padding: 40px 54px;
+        background-color: $secondary;
+        border-radius: 40px;
+        color: $white;
+        margin-bottom: 30px;
+        animation: slideInFromTop 0.5s ease-out forwards;
+    }
+
+    &__link {   
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        transition: all ease-in-out .3s;
+
+        &:hover {   
+            transform: translateY(-3px);
+        }
+    }
+
+    &__link-text {  
+        color: $text;
+        border-bottom: 2px solid $text;
+    }
+
+    &__btn {    
+        width: 100%;
+        background-color: #00bab7;
+        color: $white;
+        text-align: center;
+        padding: 15px 0;
+        transition: all ease .3s;
+
+        &:hover {   
+            background-color: #008482;
+        }
+
+        &:active {   
+            background-color: #005c5a;
+        }
+    }
+
+    &__name {   
+        font-size: 32px;
+    }
+
+    &__role {   
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+
+    &__accord { 
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        color: $white;
+    }
+
+    &__accord-header {    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: $primary;
+        border-radius: 15px;
+        margin-bottom: 12px;
+    }
+
+    &__accord-name {    
+        font-size: 20px;
+    }
+
+    &__accord-role {    
+        font-size: 18px;
+    }
+
+    &__accord-body {    
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2, minmax(auto-fill, 400px));
+        padding: 15px;
+        background-color: $primary;
+        border-radius: 15px;
+    }
+
+    &__accord-img { 
+        height: 90%;
+    }
+
+    &__accord-content { 
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+        &.open {    
+            max-height: 1000px;
+        }
+    }   
+
+    &__accord-card {
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        background-image: url('../../assets/main/docBg.png');
+        background-size: cover;
+        background-position: center;
+        border-radius: 40px;
+    }
+
+    &__accord-info {    
+        display: grid;  
+        gap: 5px;
+        justify-content: center;
+        align-content: center;
+    }
+
+    &__accord-btn { 
+        background-color: #00bab7;
+        padding: 12px 20px;
+        width: 100%;
+        margin-top: 30px;
+        text-align: center;
+        color: $white;
+    }
+
+    &__accord-descr {   
+        grid-column: 1 / span 2;
+    }
+
+    &__accord-link {    
+        display: none;
+    }
+}
+
+@media (max-width: 1400px) { 
+
+    .doctors {  
+
+        &__card {   
+            height: 500px;
+            min-width: 300px;
+        }
+
+        &__img {    
+            height: 450px;
+        }
+
+        &__role {   
+            margin-bottom: 20px;
+        }
+
+        &__info {  
+            padding: 20px 34px;
+        }
+    }
+}
+
+@media (max-width: 1300px) {    
+
+    .doctors {  
+        
+        &__name {   
+            font-size: 24px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {    
+
+    .doctors {  
+
+        &__card {   
+            height: 500px;
+            min-width: 300px;
+        }
+
+        &__img {    
+            height: 450px;
+        }
+
+        &__tab-name {   
+            font-size: 16px;
+        }
+
+        &__name {   
+            font-size: 20px;
+        }
+
+        &__role {   
+            font-size: 16px;
+        }
+
+        &__descr {  
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 1100px) {    
+
+    .doctors {  
+        &__content {    
+            gap: 60px;
+        }
+
+        &__card {   
+            display: none;
+        }
+
+        &__link {   
+            bottom: -40px;
+            left: 20px;
+        }
+    }
+}
+
+@media (max-width: 868px) {
+    
+    .doctors {  
+        &__content {    
+            gap: 10px;
+        }
+
+        &__name {    
+            display: none;
+        }
+
+        &__role {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 768px) { 
+    .doctors {  
+
+        &__heading {   
+            font-size: 40px; 
+            margin-bottom: 30px;
+        }
+
+        &__accord { 
+            display: flex;
+        }
+
+        &__content {
+            display: none;
+        }
+
+        &__link {   
+            margin-top: 10px;
+            position: static;
+        };
+
+        &__accord-link {    
+            display: block;
+            margin-top: 40px;
+        }
+    }
+}
+
+@media (max-width: 600px) { 
+    .doctors {  
+        &__accord-btn {   
+            font-size: 14px;
+            padding: 8px 8px;
+        }
+        
+        &__accord-card {    
+            border-radius: 10px;
+        }
+
+        &__accord-name {   
+            font-size: 18px;
+            text-align: center;
+        }
+
+        &__accord-role {   
+            font-size: 16px;
+            text-align: center;
+        }
+    }
+}
+
+
+
+@media (max-width: 462px) { 
+    .doctors {  
+        &__heading {    
+            font-size: 28px;
+        }
+
+        &__accord-name {    
+            font-size: 16px;
+        }
+
+        &__accord-role {
+            font-size: 14px;
+        }
+
+        &__accord-btn { 
+            font-size: 12px;
+        }
+
+        &__accord-descr {   
+            font-size: 14px;
+        }
+    }
+}
+
+// grid-template-rows: repeat(2, minmax(auto-fill, 400px));

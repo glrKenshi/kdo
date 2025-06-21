@@ -1,0 +1,233 @@
+@import '../../styles/variables';
+
+.header {   
+    // max-width: 1472px;
+	// padding: 0 20px;
+	margin: 0 auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__burger { 
+        display: none;
+    }
+
+    &__list {   
+        display: flex;
+        gap: 20px;
+    }
+
+    &__item {   
+        color: $white;
+        padding: 8px 18px;
+        background-color: $secondary;
+        border: 2px solid $secondary;
+        transition: all ease .2s;
+
+        a { 
+            color: $white;
+        }
+
+        &:hover {   
+            &.header__item__menu .header__dropdown {    
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        &__menu {   
+            position: relative;
+
+            > span {    
+                position: relative;
+                z-index: 2; // Больше чем у dropdown
+                display: inline-block; // Чтобы z-index работал
+            }
+        }
+    }
+
+    &__dropdown {   
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        background-color: $secondary;
+        padding: 20px;
+        border-radius: 40px;
+        border-top-right-radius: 0;
+        min-width: 260px;
+        width: 100%;
+        top: 50%;
+        right: 0px;
+        text-transform: none;
+        opacity: 0;
+        visibility: hidden;
+        // transform: translateY(-10px);
+        transition: all ease-in-out .2s;
+    }
+
+    &__dropdown-item {  
+        &:hover {   
+            color: #ffffff;
+        }
+    }
+
+    &__socials {    
+        display: flex;
+        gap: 20px
+    }
+
+    &__social-icon {    
+        height: 40px;
+        width: 40px;
+    }
+
+    &__info {   
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        align-items: end;
+
+        @media (max-width: 1200px) {
+            display: none;
+        }
+    }
+}
+
+.logo { 
+    display: flex;
+    margin-right: 20px;
+    align-items: center;
+    margin-right: 6px;
+
+    &__img {    
+        cursor: pointer;
+    }
+
+    &__title {  
+        display: inline;
+        color: $primary;
+        text-transform: uppercase;
+        margin-left: 20px;
+        font-size: 14px;
+
+        @media (max-width: 1024px) {
+            display: none;
+        }
+    }
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 60px; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        text-align: end;
+        position: relative;
+        background-color: $background;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        padding: 20px;
+        z-index: 1001;
+
+        animation: slideInFromTop 300ms ease-out;
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__item {
+        font-weight: bold;
+        color: $primary;
+
+        a { 
+            color: inherit;
+        }
+    }
+
+    &__sublist {
+        list-style: none;
+        margin-left: 10px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        li {
+            font-size: 14px;
+            
+            a {
+                color: $secondary;
+            }
+        }
+    }
+
+    &__info {
+        margin-top: 20px;
+    }
+
+    &__backdrop {
+        position: fixed;
+        top: 60px; 
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+    }
+}
+
+
+@media (max-width: 1000px) {    
+    .header {   
+        &__item {   
+            padding: 6px 10px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .header {   
+
+        &__list {   
+            display: none;
+        }
+
+        &__socials {    
+            display: none;
+        }
+
+        &__burger { 
+            display: block;
+        }
+    }
+
+    .logo {
+        &__title {  
+            display: block;
+        }
+    }
+}
+
+@media (max-width: 540px) { 
+    .logo {   
+        &__title {  
+            font-size: 13px;
+        }
+    }
+}

@@ -1,0 +1,143 @@
+@import '../../styles/variables';
+
+.why {  
+    margin-bottom: 150px;
+
+    &__heading {    
+        font-size: 48px;
+        margin-bottom: 70px;
+    }
+
+    &__grid {   
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, minmax(280px, auto));
+        gap: 20px;
+    }
+
+    &__item {   
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px 20px;
+        border-radius: 40px;
+        color: $white;
+
+        &--1 {  
+        background-color: $secondary;
+        }
+
+        &--2 {
+            background-color: $primary;
+        }
+
+        &--3 {  
+            background-image: url('../../assets/main/gridImg2.png');
+            background-position: 50% 30%;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        &--4 {  
+            background-color: $primary;
+        }
+
+        &--5 {  
+            border: 3px solid $primary;
+            color: $primary;
+        }
+
+        &--6 {  
+            background-color: $secondary;
+        }
+    }
+
+    &__head {   
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+
+    &__item-heading {   
+        font-size: 19px;
+    }
+
+    &__item-descr {  
+        padding-left: 20px;
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .why {  
+
+        &__grid {   
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, minmax(280px, auto));
+            gap: 20px;
+        }
+
+        &__icon {   
+            width: 60px;
+            height: 60px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .why {  
+        margin-bottom: 100px;
+
+        &__heading {    
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        &__grid {       
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(6, auto)
+        }
+
+        &__item {   
+            &--3 {  
+                min-height: 280px;
+            }
+        }
+
+        &__icon {   
+            width: 50px;
+            height: 50px;
+        }
+    }
+}
+
+@media (max-width: 600px) { 
+    .why {  
+        &__heading {    
+            font-size: 32px;
+        }
+    }
+}
+
+@media (max-width: 462px) { 
+    .why {  
+        &__heading {    
+            font-size: 28px;
+        }
+
+        &__item-heading {   
+            font-size: 16px;
+        }
+
+        &__item-descr { 
+            font-size: 14px;
+        }
+        
+        &__icon {   
+            height: 40px;
+            width: 40px;
+        }
+    }
+}

@@ -1,0 +1,151 @@
+@import '../../styles/variables';
+
+.service {  
+    margin-bottom: 150px;
+
+    &__heading {    
+        margin-bottom: 70px;
+        font-size: 48px;
+    }
+
+    &__list {   
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 340px);
+        gap: 20px;
+        align-content: center;
+        justify-content: center;
+    }
+
+    &__item {   
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 340px;
+        width: 340px;
+        border-radius: 40px;
+        padding: 100px 40px 50px 40px;
+        color: $white;
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+        cursor: pointer;
+        transition: all ease 0.3s;
+
+        &-diagnostic {  
+            background-image: linear-gradient(rgba(35, 77, 158, 0.6)), url('../../assets/diagnostic/diagnosticImg.png');
+        }
+
+        &-apparat { 
+            background-image: linear-gradient(rgba(2, 164, 232, 0.6)), url('../../assets/apparat/apparatImg.png');
+        }
+
+        &-ortho {   
+            background-image: linear-gradient(rgba(35, 77, 158, 0.6)), url('../../assets/ortho/orthoImg.png');
+        }
+
+        &-teraphy { 
+            background-image: linear-gradient(rgba(2, 164, 232, 0.6)), url('../../assets/therapy/therapyImg.png');
+        }
+
+        &:hover {   
+            transform: scale(1.05);
+        }
+
+        a { 
+            color: $white;
+        }
+    }
+
+    &__item-heading {    
+        font-size: 32px;
+    }
+
+    &__btn {    
+        display: inline-block;
+        font-weight: 300;
+        padding: 10px;
+        border: 1px solid $white;
+        border-radius: 40px;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 1200px) {
+    .service {  
+        &__btn {    
+            padding: 14px 20px;
+            font-weight: 400;
+            font-size: 20px;
+        } 
+    }
+}
+
+@media (max-width: 1000px) {
+    .service {  
+
+        &__item {   
+            height: 320px;
+            width: 320px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .service {  
+
+        margin-bottom: 100px;
+
+        &__heading {    
+            margin-bottom: 20px;
+            font-size: 40px;
+        }
+
+        &__list {   
+            grid-template-columns: 1fr;
+        }
+
+        &__item {   
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 600px) { 
+    .service {  
+
+        &__item {   
+            padding: 50px 60px 40px 60px;
+            height: 240px;
+        }
+
+        &__item-heading {
+            font-size: 24px;
+        }
+
+        &__btn {    
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 462px) { 
+    .service {  
+        &__item {   
+            height: 180px;
+        }
+
+        &__heading {    
+            font-size: 28px;
+        }
+
+        &__item-heading {   
+            font-size: 18px;
+        }
+
+        &__btn {
+            font-size: 12px;
+            padding: 8px 10px;
+        }
+    }
+}
