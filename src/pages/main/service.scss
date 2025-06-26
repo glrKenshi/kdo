@@ -33,19 +33,23 @@
         transition: all ease 0.3s;
 
         &-diagnostic {  
-            background-image: linear-gradient(rgba(35, 77, 158, 0.6)), url('../../assets/diagnostic/diagnosticImg.png');
+            background-image: linear-gradient(rgba(35, 77, 158, 0.6), rgba(35, 77, 158, 0.6)),
+            url('../../assets/diagnostic/diagnosticImg.png');
         }
 
         &-apparat { 
-            background-image: linear-gradient(rgba(2, 164, 232, 0.6)), url('../../assets/apparat/apparatImg.png');
+            background-image: linear-gradient(rgba(35, 77, 158, 0.6), rgba(35, 77, 158, 0.6)),
+            url('../../assets/apparat/apparatImg.png');
         }
 
         &-ortho {   
-            background-image: linear-gradient(rgba(35, 77, 158, 0.6)), url('../../assets/ortho/orthoImg.png');
+            background-image: linear-gradient(rgba(35, 77, 158, 0.6), rgba(35, 77, 158, 0.6)),
+            url('../../assets/ortho/orthoImg.png');
         }
 
         &-teraphy { 
-            background-image: linear-gradient(rgba(2, 164, 232, 0.6)), url('../../assets/therapy/therapyImg.png');
+            background-image: linear-gradient(rgba(35, 77, 158, 0.6), rgba(35, 77, 158, 0.6)),
+            url('../../assets/therapy/therapyImg.png');
         }
 
         &:hover {   
