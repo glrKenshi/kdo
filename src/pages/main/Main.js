@@ -65,8 +65,8 @@ const Main = () => {
         }
     ]
 
-    const clinicAddress = "г. Белгород, ул. Победы, д. 69а"
-    const clinicCoordinates = [50.591766, 36.594921]
+    const clinicAddress = "Белгород, ул. Лермонтова 47а"
+    const clinicCoordinates = [50.577708, 36.563193]
 
     return (
         <main className='main'>
