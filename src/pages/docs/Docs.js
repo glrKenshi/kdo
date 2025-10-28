@@ -5,7 +5,7 @@ import Boss from '../../assets/doctors/boss.png'
 import Jernova from '../../assets/doctors/Jernova.png'
 import Skorikova from '../../assets/doctors/Skorikova.png'
 import Pereligina from '../../assets/doctors/Pereligina.png'
-import Tochilina from '../../assets/doctors/Tochilina.png'
+import Belyash from '../../assets/doctors/Belyash.png'
 import Belyaeva from '../../assets/doctors/Belyaeva.png'
 import Getman from '../../assets/doctors/Getman.png'
 
@@ -36,9 +36,9 @@ const Docs = () => {
       url: Pereligina
     },
     {
-      name: "Точилина Елизавета Анатольевна",
+      name: "Белашова Инна Васильевна",
       role: "Медсестра",
-      url: Tochilina
+      url: Belyash
     },
     {
       name: "Беляева Виолетта Евгеньевна",

@@ -92,6 +92,7 @@
     .docs { 
         &__list {
             grid-template-columns: repeat(2, minmax(auto, 340px));
+            justify-content: center;
         }   
     
         &__item-top {

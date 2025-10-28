@@ -15,6 +15,9 @@ const Therapy = lazy(() => import('./pages/therapy/Therapy'))
 const Ortho = lazy(() => import('./pages/ortho/Ortho'))
 const Diagnostic = lazy(() => import('./pages/diagnostic/Diagnostic'))
 const Apparat = lazy(() => import('./pages/apparat/Apparat'))
+const Requisite = lazy(() => import('./pages/requisite/Requisite'))
+const Supervisory = lazy(() => import('./pages/supervisory/Supervisory'))
+const Сertificate = lazy(() => import('./pages/certificate/Сertificate'))
 
 function App() {
     return (
@@ -32,6 +35,9 @@ function App() {
                             <Route path="/therapy" element={<Therapy/>}/>
                             <Route path="/doctors" element={<Doctors/>}/>
                             <Route path="/price" element={<Price/>}/>
+                            <Route path="/requisite" element={<Requisite/>}/>
+                            <Route path="/supervisory" element={<Supervisory/>}/>
+                            <Route path="/certificate" element={<Сertificate/>}/>
                         </Routes>
                     </Suspense>
                 </div>

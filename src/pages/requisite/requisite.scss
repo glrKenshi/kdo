@@ -1,0 +1,116 @@
+@import '../../styles/variables';
+
+.requisite {    
+    &__breadcrumbs {    
+        margin-top: 25px;
+        margin-bottom: 40px;
+        display: flex;
+        gap: 10px;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+
+    &__heading {    
+        font-size: 48px;
+        font-weight: 500;
+        margin-bottom: 50px;
+    }
+
+    &__descr {  
+        font-size: 20px;
+        margin-bottom: 60px;
+    }
+}
+
+.company-details {
+    max-width: 948px;
+    margin: 0 auto;
+    margin-bottom: 150px;
+    background: #FDFEFF;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 2px solid $primary;
+}
+
+.detail-item {
+    display: flex;
+    border-bottom: 2px solid $primary;
+    transition: background-color 0.2s ease;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.detail-item:last-child {
+    border-bottom: none;
+}
+
+.detail-label {
+    width: 30%;
+    padding: 16px;
+    padding-left: 24px;
+    color: #333;
+    border-right: 2px solid $primary;
+}
+
+.detail-value {
+    width: 70%;
+    padding: 16px;
+    background-color: #fff;
+    color: #555;
+}
+
+
+.contact-info {
+    margin-bottom: 4px;
+}
+
+.bank-details {
+    margin-bottom: 4px;
+    font-family: 'Courier New', monospace;
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+    .requisite {    
+        &__breadcrumbs {
+            display: none;
+        }
+
+        &__heading {    
+            margin-bottom: 20px;
+            font-size: 32px;
+        }
+
+        &__descr {  
+            margin-bottom: 40px;
+            font-size: 16px;
+        }
+    }
+
+    .company-details {  
+        box-shadow: none;
+        margin-bottom: 100px;
+    }
+    
+    .detail-item {
+        flex-direction: column;
+        border-bottom: 2px solid $primary;
+        overflow: hidden;
+        font-size: 16px;
+    }
+    
+    .detail-label {
+        width: 100%;
+        border-right: none;
+        padding-bottom: 10px;
+        font-weight: 600;
+        padding-left: 20px;
+    }
+    
+    .detail-value {
+        padding-top: 0;
+        width: 100%;
+        padding-left: 20px;
+    }
+}
