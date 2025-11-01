@@ -20,19 +20,19 @@ const Docs = () => {
     },
     {
       name: "Жерновая Лариса Михайловна",
-      role: "детский офтальмолог",
+      role: "Детский офтальмолог",
       link: "https://prodoctorov.ru/belgorod/vrach/43545-zhernovaya/",
       url: Jernova
     },
     {
       name: "Скорикова Тамара Николаевна",
-      role: "детский офтальмолог",
+      role: "Детский офтальмолог",
       link: "https://prodoctorov.ru/belgorod/vrach/813248-skorikova/",
       url: Skorikova
     },
     {
       name: "Перелыгина Анастасия Станиславовна",
-      role: "оптометрист",
+      role: "Оптометрист",
       url: Pereligina
     },
     {
